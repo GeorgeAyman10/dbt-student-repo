@@ -1,4 +1,8 @@
-{{ config(materialized='incremental') }}
+{{ config(
+    materialized='incremental',
+    pre_hook="{{ starting_run() }}",
+    post_hook="{{ ending_run() }}"
+) }}
 
 select list.*, dest.destination
 from {{ ref('stg_listings') }} list

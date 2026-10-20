@@ -1,0 +1,13 @@
+version: 2
+groups:
+  - name: hr
+    description: "Human Resources related models"
+    owner:
+      name: hr Team
+      email: hr@example.com
+
+  - name: sales
+    description: "Sales related models"
+    owner:
+      name: sales Team
+      email: sales@example.com

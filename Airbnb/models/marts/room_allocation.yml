@@ -1,0 +1,19 @@
+version: 2
+models:
+  - name: room_allocation
+    config:
+      group: hr
+      access: protected
+
+exposures:
+  - name: rooms
+    label: Rooms Dashboard
+    type: dashboard
+    maturity: high
+    url: https://powerbi.example.com/rooms
+    description: "Dashboard for room allocation"
+    depends_on:
+      - ref('room_allocation')
+    owner:
+      name: hr Team
+      email: hr@example.com
